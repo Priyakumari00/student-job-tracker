@@ -4,7 +4,7 @@ import JobForm from "../components/JobForm";
 import JobList from "../components/JobList";
 import "../styles/JobTracker.css";
 
-const API_BASE_URL = "http://localhost:5000/api/jobs";
+const API_BASE_URL = `${process.env.REACT_APP_SERVER_URL}/api/jobs`;
 
 export default function JobTracker() {
   const [jobs, setJobs] = useState([]);
