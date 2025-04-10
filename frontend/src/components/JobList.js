@@ -14,6 +14,7 @@ export default function JobList({ jobs, fetchJobs }) {
     await axios.delete(`${API_BASE_URL}/${id}`);
     fetchJobs();
   };
+  
 
   return (
     <div className="job-list">
@@ -24,12 +25,17 @@ export default function JobList({ jobs, fetchJobs }) {
           <p><strong>Date:</strong> {new Date(job.date).toLocaleDateString()}</p> 
           <a href={job.link} className="job-link" target="_blank" rel="noopener noreferrer">🔗 Job Link</a>
           <div className="actions">
-            <select onChange={(e) => updateStatus(job._id, e.target.value)}>
-              <option value="Applied" selected={job.status === "Applied"}>Applied</option>
-              <option value="Interview" selected={job.status === "Interview"}>Interview</option>
-              <option value="Offer" selected={job.status === "Offer"}>Offer</option>
-              <option value="Rejected" selected={job.status === "Rejected"}>Rejected</option>
-            </select>
+          <select 
+  value={""}  // Set default to empty so "Update Status" appears
+  onChange={(e) => updateStatus(job._id, e.target.value)}
+>
+  <option value="" disabled>update status</option> {/* Placeholder */}
+  <option value="Applied">Applied</option>
+  <option value="Interview">Interview</option>
+  <option value="Offer">Offer</option>
+  <option value="Rejected">Rejected</option>
+</select>
+
             <button onClick={() => deleteJob(job._id)} className="btn-delete"> Delete</button>
           </div>
         </div>

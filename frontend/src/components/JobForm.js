@@ -8,7 +8,7 @@ export default function JobForm({ fetchJobs }) {
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
   const [link, setLink] = useState("");
-  const [status, setStatus] = useState("Applied");
+  const [status, setStatus] = useState("");
   const [date, setDate] = useState("");
 
   function scrollToBottom() {
@@ -31,7 +31,7 @@ export default function JobForm({ fetchJobs }) {
     setCompany("");
     setRole("");
     setLink("");
-    setStatus("Applied");
+    setStatus("");
     setDate("");
 
     
