@@ -11,6 +11,10 @@ export default function JobForm({ fetchJobs }) {
   const [status, setStatus] = useState("Applied");
   const [date, setDate] = useState("");
 
+  function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!company || !role || !link || !date) {
@@ -19,6 +23,8 @@ export default function JobForm({ fetchJobs }) {
     }
 
     await axios.post(API_BASE_URL, { company, role, link, status, date });
+    scrollToBottom();
+
     fetchJobs();
 
     // Clear the form
