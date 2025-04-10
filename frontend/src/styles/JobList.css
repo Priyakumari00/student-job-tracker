@@ -1,0 +1,83 @@
+/* src/styles/JobList.css */
+.job-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  overflow-x: auto;
+  justify-content: flex-start;
+}
+
+.job-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-left: 4px solid #2b7a78;
+  transition: all 0.3s;
+  width: 200px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.job-card h3, .job-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.job-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.job-link {
+  color: #2b7a78;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.job-link:hover {
+  color: #1f5c5b;
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+.actions select {
+  flex-grow: 1;
+  padding: 6px;
+  border-radius: 6px;
+  background: #f0f4f8;
+  border: 1px solid #b0bec5;
+  cursor: pointer;
+  width: 70%;
+}
+
+.btn-delete {
+  background: #ff5252;
+  color: white;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-delete:hover {
+  background: #e53935;
+  transform: scale(1.05);
+}
