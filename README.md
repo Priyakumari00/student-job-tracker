@@ -65,14 +65,13 @@ Create a `.env` file in both **frontend** and **backend** directories.
 
 #### Frontend `.env`:
 ```sh
-REACT_APP_API_URL=http://localhost:5000
+REACT_APP_SERVER_URL=http://localhost:5000
 ```
 
 #### Backend `.env`:
 ```sh
 PORT=5000
 MONGO_URI=mongodb+srv://your-mongo-db-url
-JWT_SECRET=your-secret-key
 ```
 Restart the servers after modifying `.env`.
 
